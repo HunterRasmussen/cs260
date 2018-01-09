@@ -1,2 +1,2 @@
 # cs260
-Projects for 260
+All projects for 260 will be here
