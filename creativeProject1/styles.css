@@ -1,0 +1,89 @@
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+.HolyGrail-header {
+  text-align: left;
+  background-color: #ffb07c;
+  min-height: 50px;
+  margin-bottom: 0px;
+}
+
+
+#logo{
+  /*position: relative;*/
+  top: 3px;
+  left: 1%;
+}
+
+/*.HolyGrail-body{
+  background-color: #ffb07c;
+  max-height: 80px;
+}
+*/
+.HolyGrail-body ul {
+  background-color:  #ffb07c;
+  /*position:relative;*/
+  max width: 100%;
+  /*margin-left: 35%;*/
+  /*margin-right: 35%;*/
+	/*list-style-type: none;*/
+  text-align: left;
+  overflow: hidden;
+}
+
+.HolyGrail-body li {
+  float: left;
+  background-color:  #ffb07c;
+  display: inline-block;
+
+}
+
+.HolyGrail-body .active {
+	background-color: #7caeff;
+	color: white
+}
+
+.HolyGrail-body a{
+	display: block;
+	color: #000;
+  text-align: left;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.HolyGrail-body a:hover {
+	/*background-color: #555;*/
+	color: black;
+  text-decoration: underline;
+  text-decoration-color: #7caeff;
+}
+
+
+
+.HolyGrail-body {
+  text-align: center;
+  display: flex;
+  flex: 1;
+}
+
+
+
+.HolyGrail-content {
+  margin-top: 50px;
+  flex: 1;
+}
+
+.HolyGrail-nav, .HolyGrail-right {
+  /* 12em is the width of the columns */
+  flex: 0 0 25em;
+  background-color: #7caeff;
+}
+
+.HolyGrail-nav {
+  /* put the nav on the left */
+  order: -1;
+}
