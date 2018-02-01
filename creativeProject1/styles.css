@@ -2,9 +2,12 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  height: 100%;
+  margin: 0;
+
 }
 
-
+/*-----------------------------------------------*/
 .HolyGrail-header {
   text-align: left;
   background-color: #ffb07c;
@@ -19,71 +22,113 @@
   left: 1%;
 }
 
-/*.HolyGrail-body{
-  background-color: #ffb07c;
-  max-height: 80px;
+/*-------------------------------------------------*/
+.HolyGrail-body {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex: 1;
 }
-*/
-.HolyGrail-body ul {
-  background-color:  #ffb07c;
+
+
+.HolyGrail-content {
+  margin-top: 50px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+   "gridHeader gridHeader"
+   "gridSidebar gridContent";
+}
+
+.gridHeader{
+  grid-area: gridHeader;
+}
+
+.gridContent{
+  grid-area: gridContent;
+}
+.gridSidebar{
+  grid-area: gridSidebar;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.HolyGrail-body .HolyGrail-content .gridHeader ul {
+  /*background-color:  #ffb07c;*/
+  background-color: white;
   /*position:relative;*/
   max width: 100%;
+  margin-left: 0px;
   /*margin-left: 35%;*/
   /*margin-right: 35%;*/
 	/*list-style-type: none;*/
-  text-align: left;
+  text-align: center;
+  font-size: 28px;
+  font-family: cursive;
   overflow: hidden;
 }
 
-.HolyGrail-body li {
+.HolyGrail-body .HolyGrail-content .gridHeader li {
   float: left;
-  background-color:  #ffb07c;
+  /*background-color:  #ffb07c;*/
+  background-color: white;
   display: inline-block;
 
 }
 
-.HolyGrail-body .active {
-	background-color: #7caeff;
-	color: white
+.HolyGrail-body .HolyGrail-content .active {
+	/*background-color: #7caeff;*/
+  padding: 0px;
+	color: #7caeff;
+}
+
+.HolyGrail-body .HolyGrail-content .activeLink {
+  color: #7caeff;
 }
 
 .HolyGrail-body a{
 	display: block;
 	color: #000;
   text-align: left;
-	padding: 16px;
+	padding: 15px;
 	text-decoration: none;
 }
 
 .HolyGrail-body a:hover {
 	/*background-color: #555;*/
-	color: black;
+	color: #ffb07c;
   text-decoration: underline;
   text-decoration-color: #7caeff;
 }
 
 
-
-.HolyGrail-body {
-  text-align: center;
-  display: flex;
-  flex: 1;
+.HolyGrail-body .HolyGrail-content hr {
+  color: white;
 }
 
+/*------------------------------------------------------------*/
 
-
-.HolyGrail-content {
-  margin-top: 50px;
-  flex: 1;
-}
-
-.HolyGrail-nav, .HolyGrail-right {
+.HolyGrail-left, .HolyGrail-right {
   /* 12em is the width of the columns */
-  flex: 0 0 25em;
-  background-color: #7caeff;
+  flex: 0 0 20%;
+  /*background-color: #7caeff;*/
 }
 
-.HolyGrail-nav {
+.HolyGrail-left {
   /* put the nav on the left */
   order: -1;
+}
+
+
+/*-----------------------------------------------*/
+.HolyGrail-footer {
+  text-align: left;
+  background-color: #ffb07c;
+  min-height: 50px;
+  margin-top: 50px;
 }
