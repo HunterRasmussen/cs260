@@ -13,6 +13,7 @@
   background-color: #ffb07c;
   min-height: 50px;
   margin-bottom: 0px;
+  max-height: 100px;
 }
 
 
@@ -35,52 +36,24 @@
   margin-top: 50px;
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-column-gap: 10px;
   grid-template-areas:
-   "gridHeader gridHeader gridHeader"
-   "mainHeader mainHeader mainHeader"
-   "headPhotos1 headPhotos1 headPhotos1"
-   "gridSidebar gridContent gridContent";
+   "gridHeader"
+   "gridContent";
 }
 
 .gridHeader{
   grid-area: gridHeader;
 }
 
-.mainHeader{
-    grid-area: mainHeader;
-    text-align: center;
-    font-family: cursive;
-}
-
-.headPhotos1{
-  grid-area: headPhotos1;
-  float: left;
-}
-.headPhotos2{
-  grid-area: headPhotos2;
-}
-.headPhotos3{
-  grid-area: headPhotos3;
-
-}
 
 .gridContent{
   grid-area: gridContent;
   text-align: left;
 }
 
-
-.gridSidebar{
-  grid-area: gridSidebar;
-}
-
-.HolyGrail-body .HolyGrail-content .gridSidebar img {
-  max-width: 100%;
-  max-height: 100%;
-
-}
 
 .HolyGrail-body .HolyGrail-content .gridHeader ul {
   /*background-color:  #ffb07c;*/
@@ -160,5 +133,5 @@
   text-align: center;
   background-color: #ffb07c;
   min-height: 20px;
-  margin-top: 600px;
+  margin-top: 100px;
 }

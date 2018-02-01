@@ -13,6 +13,7 @@
   background-color: #ffb07c;
   min-height: 50px;
   margin-bottom: 0px;
+  max-height: 100px;
 }
 
 
@@ -34,53 +35,80 @@
 .HolyGrail-content {
   margin-top: 50px;
   flex: 1;
+  text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 50px;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 10fr;
+  grid-column-gap: 20px;
   grid-template-areas:
-   "gridHeader gridHeader gridHeader"
-   "mainHeader mainHeader mainHeader"
-   "headPhotos1 headPhotos1 headPhotos1"
-   "gridSidebar gridContent gridContent";
+   "gridHeader gridHeader gridHeader gridHeader"
+   "gridContent gridContent2 gridContent3 gridSidebar";
+}
+
+.HolyGrail-content a{
+  text-align: center;
 }
 
 .gridHeader{
   grid-area: gridHeader;
 }
 
-.mainHeader{
-    grid-area: mainHeader;
-    text-align: center;
-    font-family: cursive;
-}
-
-.headPhotos1{
-  grid-area: headPhotos1;
-  float: left;
-}
-.headPhotos2{
-  grid-area: headPhotos2;
-}
-.headPhotos3{
-  grid-area: headPhotos3;
-
-}
-
 .gridContent{
   grid-area: gridContent;
   text-align: left;
+    text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+  font-family: inherit;
 }
+
+.gridContent2{
+  grid-area: gridContent2;
+}
+
+.gridContent3{
+  grid-area: gridContent3;
+}
+
+.gridContent img {
+  float:left;
+  max-width: 100%;
+  padding: 15px
+}
+.gridContent2 img {
+  float:left;
+  max-width: 100%;
+  padding: 15px
+}
+.gridContent3 img {
+  float:left;
+  max-width: 100%;
+  padding: 15px
+}
+
 
 
 .gridSidebar{
   grid-area: gridSidebar;
+  font-family: cursive;
+  font-size: 15px;
 }
 
-.HolyGrail-body .HolyGrail-content .gridSidebar img {
-  max-width: 100%;
-  max-height: 100%;
-
+.gridSidebar .sidebarImage img {
+  max-height: 50%;
+  max-width: 50%%
 }
+
+
+
+
+
+.gridSidebar a {
+  padding: none;
+  margin: none;
+}
+
+
 
 .HolyGrail-body .HolyGrail-content .gridHeader ul {
   /*background-color:  #ffb07c;*/
@@ -119,7 +147,7 @@
 .HolyGrail-body a{
 	display: block;
 	color: #000;
-  text-align: left;
+  text-align: center;
 	padding: 15px;
 	text-decoration: none;
 }
@@ -139,6 +167,7 @@
 .HolyGrail-body .HolyGrail-content .gridContent h2 {
   text-align: center;
   font-family: cursive;
+  font-size: 40px;
 }
 
 /*------------------------------------------------------------*/
@@ -160,5 +189,5 @@
   text-align: center;
   background-color: #ffb07c;
   min-height: 20px;
-  margin-top: 600px;
+  margin-top: 100px;
 }
