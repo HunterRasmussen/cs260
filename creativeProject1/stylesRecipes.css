@@ -37,7 +37,7 @@
   flex: 1;
   text-align: center;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 1fr 10fr;
   grid-column-gap: 20px;
   grid-template-areas:
@@ -55,9 +55,9 @@
 
 .gridContent{
   grid-area: gridContent;
-  text-align: left;
+  /*text-align: left;*/
     text-align: center;
-  line-height: 35px;
+  /*line-height: 35px;*/
   font-size: 20px;
   font-family: inherit;
 }
@@ -86,10 +86,12 @@
   padding: 15px
 }
 
-
+/*---------------------------sidebar-----------------*/
 
 .gridSidebar{
+  text-align: left;
   grid-area: gridSidebar;
+  margin-left: 40px;
   font-family: cursive;
   font-size: 15px;
 }

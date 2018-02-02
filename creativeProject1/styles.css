@@ -145,7 +145,7 @@
 
 .HolyGrail-left, .HolyGrail-right {
   /* 12em is the width of the columns */
-  flex: 0 0 20%;
+  flex: 0 0 15%;
   /*background-color: #7caeff;*/
 }
 
