@@ -1,0 +1,81 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 8fr 2fr 1fr;
+  grid-column-gap: 0px;
+  margin: 0px;
+  grid-template-areas:
+  "leftSidebar header header rightSidebar"
+  "leftSidebar bingSearch weather rightSidebar"
+  "leftSidebar footer footer rightSidebar";
+
+}
+
+
+.header {
+  grid-area: header;
+  background: #91bbff;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+  font-size: 50px;
+  font-family: cursive;
+}
+
+.header p {
+  margin-top: 0px;
+}
+
+.bingSearch {
+  grid-area: bingSearch;
+  min-height: 500px;
+}
+
+.weather p {
+  text-align: center;
+  padding-left: 10px; 
+}
+
+.weather {
+  margin-top: 0px;
+  grid-area: weather;
+  background-color: #efefef;
+  padding-right: 20px;
+}
+
+.leftSidebar{
+  grid-area: leftSidebar;
+  background-color: white;
+}
+
+.rightSidebar{
+  grid-area: rightSidebar;
+  background-color: white;
+}
+
+.stackOverflow{
+  grid-area: stackOverflow;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.weather h2{
+  text-align: center;
+
+}
+
+.stackOverflow h2{
+  text-align: center;
+}
+
+.footer{
+  grid-area: footer;
+  background-color: #91bbff;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.footer a {
+  color: black;
+}
