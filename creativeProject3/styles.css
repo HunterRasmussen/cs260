@@ -1,0 +1,55 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 1fr;
+  grid-column-gap: 3px;
+  margin: 0px;
+  grid-template-areas:
+  "leftSidebar header header rightSidebar"
+  "leftSidebar app app rightSidebar"
+  "leftSidebar footer footer rightSidebar";
+
+}
+
+h2{
+  text-align: center;
+}
+
+
+#header {
+  grid-area: header;
+  text-align: center;
+  background-color: #ff907c;
+  min-height: 50px;
+}
+
+#app {
+  grid-area: app;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3px;
+  margin: 0px;
+  grid-template-areas:
+  "truths dares";
+}
+
+
+#truths {
+  grid-area: truths;
+  background-color: #ffd17c;
+  text-align: center;
+
+  min-height: 500px;
+}
+
+#dared {
+  grid-area: dares;
+  background-color: #ffd17c;
+  text-align: center;
+}
+
+#footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #ffb07c;
+  min-height: 20px;
+}
