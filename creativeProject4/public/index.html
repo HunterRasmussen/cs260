@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>WalkCycles</title>
+  </head>
+
+<body>
+<div class="container">
+  <div id="app">
+    <h1>A list of Animations</h1>
+    <form v-on:submit.prevent="addAnimation">
+      <input type = "radio" name = "type" value = "human" v-model="type">Human<br/>
+      <input type = "radio" name = "type" value = "cat" v-model="type">Cat<br/>
+      <input type = "radio" name = "type" value = "doe" v-model="type">Doe<br/>
+        <button type="submit">Add</button>
+    </form>
+
+       <li v-for="animation in animations">
+           <!--<transition name="transition"> -->
+             <div v-if="animation.show" :class="animation.type" :id ="animation.walk"></div>
+        <!--  </transition> -->
+          <br/>
+          <button v-on:click="animationWalk(animation)">{{ animation.walk ? 'stop' : 'animate' }}</button>
+        <!--  <button @click="animation.show = !animation.show">{{ animation.show ? 'walk' : 'moon walk' }}</button> -->
+          <button v-on:click="deleteAnimation(animation)" class="delete">Remove</button>
+       </li>
+  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+    integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"
+      integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA="
+      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+  <div id = "footer"><a href="https://github.com/HunterRasmussen/cs260/tree/master/creativeProject3">gitHub</a> </div>
+
+</div>
+</body>

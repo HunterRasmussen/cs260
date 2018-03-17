@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+}
+
+/* List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    align-items: center;
+}
+
+label {
+    width: 400px;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
+
+#footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #ffb07c;
+  min-height: 20px;
+  margin-top: 50px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background: #949c4e;
+  background: linear-gradient(
+    115deg,
+    rgba(86, 216, 228, 1) 10%,
+    rgba(159, 1, 234, 1) 90%
+  );
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+html,
+body,
+.container {
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p, a {
+  color: #666;
+}
+
+button {
+  font-family: "Roboto Mono";
+  padding: 10px 15px;
+  border: none;
+  color: #FFF;
+  outline: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px;
+  margin: 5px;
+}
+
+.container {
+  margin: 25px 50px;
+}
+
+.character {
+    0 0 no-repeat;
+}
+
+.human {
+  width: 87px;
+  height: 151px;
+  background: url("https://raw.githubusercontent.com/netzzwerg/workshop-javascript/master/CSS3-animations/example05/character.png")
+}
+
+.doe {
+  width: 350px;
+  height: 250px;
+  background: url("doeWalkFinal.png");
+}
+
+.cat {
+  background: url("cat_walkFinal.png");
+  width: 175px;
+  height: 93px;
+}
+
+#true.cat {
+  animation: catWalk 1s steps(12) infinite;
+}
+
+#true.human {
+  animation: humanWalk 1s steps(12) infinite;
+}
+
+#true.doe {
+  animation: doeWalk 2s steps(18) infinite;
+}
+
+.transition-enter.human,
+.transition-leave-to.human {
+  transform: translate3d(1044px, 0, 0);
+}
+
+@keyframes catWalk  {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2100px;
+  }
+}
+
+@keyframes humanWalk {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -1044px;
+  }
+}
+
+@keyframes doeWalk {
+  from{
+    background-position: 0px;
+  }
+  to{
+    background-position: -7360px;
+  }
+}
